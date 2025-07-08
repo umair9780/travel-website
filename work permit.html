@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Permit Visas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #00796b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .visa-type {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        .visa-type h2 {
+            margin-top: 0;
+            color: #004d40;
+        }
+        .visa-type p {
+            margin: 10px 0;
+            color: #00796b;
+        }
+        .contact-form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #004d40;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #004d40;
+            border-radius: 5px;
+        }
+        .form-group button {
+            background: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background: #004d40;
+        }
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .nav-buttons a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background: #004d40;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .nav-buttons a:hover {
+            background: #00796b;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Work Permit Visas</h1>
+</header>
+
+<main class="container">
+    <section class="visa-type">
+        <h2><a href="temporary-work-visa.html">Temporary Work Visa</a></h2>
+        <p>Duration: Up to 6 months</p>
+        <p>Description: This visa is for individuals who wish to work temporarily in a foreign country. It is usually tied to a specific job and employer.</p>
+    </section>
+
+    <section class="visa-type">
+        <h2><a href="skilled-worker-visa.html">Skilled Worker Visa</a></h2>
+        <p>Duration: Up to 5 years</p>
+        <p>Description: This visa is for skilled workers who have a job offer in a foreign country and meet the specific skills and qualification requirements.</p>
+    </section>
+
+    <section class="visa-type">
+        <h2><a href="permanent-work-visa.html">Permanent Work Visa</a></h2>
+        <p>Duration: Permanent</p>
+        <p>Description: This visa allows individuals to live and work permanently in a foreign country. It is typically based on having a permanent job offer or meeting certain residency requirements.</p>
+    </section>
+
+    <section class="contact-form">
+        <h2>Contact Us for More Information</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<div class="nav-buttons">
+    <a href="index.html">Home</a>
+    <a href="air-tickets.html">Air Tickets</a>
+    <a href="hotels-booking.html">Hotels Booking</a>
+</div>
+
+</body>
+</html>

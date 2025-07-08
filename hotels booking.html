@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group textarea,
+        .form-group select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            font-size: 14px;
+            background: #2e2e2e;
+            color: #ffffff;
+        }
+        .form-group button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background: #0056b3;
+        }
+        /* Navigation bar styles */
+        .navbar {
+            background-color: #333333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #555555;
+            color: white;
+        }
+        /* Specific styles for Hotel Booking form */
+        #booking-form {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+        #booking-form h2 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+        /* Specific styles for Customer Information form */
+        .customer-info-container {
+            display: none; /* Initially hidden */
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .customer-info-container h2 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+        /* WhatsApp button styles */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 9999; /* Ensure it's above other content */
+        }
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="air tickets.html">Air Tickets</a>
+        <a href="Visit Visa.html">Visit Visa</a>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Hotel Booking Form -->
+    <form id="booking-form">
+        <h2>Hotel Booking</h2>
+        <div class="form-group">
+            <label for="city">Select a City:</label>
+            <select id="city" class="city-select" required>
+                <option value="">Select a city</option>
+                <option value="1">New York</option>
+                <option value="2">London</option>
+                <option value="3">Paris</option>
+                <option value="4">Tokyo</option>
+                <option value="5">Dubai</option>
+                <option value="6">Sydney</option>
+                <option value="7">Rome</option>
+                <option value="8">Singapore</option>
+                <option value="9">Barcelona</option>
+                <option value="10">Berlin</option>
+            </select>
+        </div>
+        <div class="form-group" id="hotel-group" style="display: none;">
+            <label for="hotel">Select a Hotel:</label>
+            <select id="hotel" class="hotel-select" required>
+                <!-- Options populated dynamically -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" class="checkin-date" required>
+        </div>
+        <div class="form-group">
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" class="checkout-date" required>
+        </div>
+        <div class="form-group">
+            <button type="button" id="book-now-btn">Book Now</button>
+        </div>
+    </form>
+
+    <!-- Customer Information Form (Initially hidden) -->
+    <div class="customer-info-container" id="customer-info">
+        <h2>Customer Information Form</h2>
+        <form id="customer-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="father-name">Father's Name:</label>
+                <input type="text" id="father-name" name="father-name" required>
+            </div>
+            <div class="form-group">
+                <label for="passport">Passport Number:</label>
+                <input type="text" id="passport" name="passport" required>
+            </div>
+            <div class="form-group">
+                <label for="cnic">CNIC Number:</label>
+                <input type="text" id="cnic" name="cnic" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="contact-number">Contact Number:</label>
+                <input type="text" id="contact-number" name="contact-number" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <!-- Your footer content -->
+</footer>
+
+<!-- WhatsApp Button -->
+<a class="whatsapp-btn" href="https://api.whatsapp.com/send?phone=+923090571664&text=Hello i need more infomation" target="_blank">
+    <img src="whatsapp-icon.png" alt="WhatsApp">
+</a>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const citySelect = document.getElementById('city');
+        const hotelSelect = document.getElementById('hotel');
+        const hotelGroup = document.getElementById('hotel-group');
+        const bookNowBtn = document.getElementById('book-now-btn');
+        const bookingForm = document.getElementById('booking-form');
+        const customerInfoForm = document.getElementById('customer-info');
+        
+        // Hotel data by city (famous hotel names)
+        const hotelsByCity = {
+            1: ['The Plaza', 'The Peninsula', 'The Waldorf Astoria'],
+            2: ['The Ritz London', 'Claridge\'s', 'The Savoy'],
+            3: ['Four Seasons Hotel George V', 'Le Bristol Paris', 'Shangri-La Hotel'],
+            4: ['Park Hyatt Tokyo', 'Hotel Chinzanso Tokyo', 'The Prince Gallery Tokyo Kioicho'],
+            5: ['Burj Al Arab', 'Atlantis The Palm', 'Jumeirah Beach Hotel'],
+            6: ['Sydney Harbour Marriott Hotel', 'Shangri-La Hotel Sydney', 'Park Hyatt Sydney'],
+            7: ['Hotel Eden Rome', 'Hotel Hassler', 'Rome Cavalieri'],
+            8: ['Marina Bay Sands', 'The Ritz-Carlton Millenia Singapore', 'Mandarin Oriental Singapore'],
+            9: ['Hotel Arts Barcelona', 'W Barcelona', 'Majestic Hotel & Spa Barcelona'],
+            10: ['Hotel Adlon Kempinski', 'The Westin Grand Berlin', 'Regent Berlin']
+        };
+        
+        // Function to populate hotels dropdown based on selected city
+        function populateHotels(cityId) {
+            // Clear existing options
+            hotelSelect.innerHTML = '';
+            
+            // Add default option
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.text = 'Select a hotel';
+            hotelSelect.appendChild(defaultOption);
+            
+            // Add hotels for selected city
+            hotelsByCity[cityId].forEach((hotelName, index) => {
+                const option = document.createElement('option');
+                option.value = index + 1; // Index + 1 to match hotel index
+                option.text = hotelName;
+                hotelSelect.appendChild(option);
+            });
+            
+            // Display hotel select dropdown
+            hotelGroup.style.display = 'block';
+        }
+        
+        // Event listener for city select change
+        citySelect.addEventListener('change', (event) => {
+            const selectedCity = parseInt(event.target.value);
+            if (selectedCity) {
+                populateHotels(selectedCity);
+            } else {
+                hotelGroup.style.display = 'none';
+            }
+        });
+        
+        // Event listener for Book Now button click
+        bookNowBtn.addEventListener('click', () => {
+            const selectedCity = citySelect.options[citySelect.selectedIndex].text;
+            const selectedHotel = hotelSelect.options[hotelSelect.selectedIndex].text;
+            const checkinDate = document.getElementById('checkin').value;
+            const checkoutDate = document.getElementById('checkout').value;
+            
+            // Example: Redirect to booking page or display confirmation
+            alert(`Hotel booking details:\nCity: ${selectedCity}\nHotel: ${selectedHotel}\nCheck-in: ${checkinDate}\nCheck-out: ${checkoutDate}`);
+            
+            // Display customer information form
+            bookingForm.style.display = 'none';
+            customerInfoForm.style.display = 'block';
+        });
+    });
+</script>
+
+</body>
+</html>

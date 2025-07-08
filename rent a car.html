@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Car</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: #00796b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .car {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        .car h2 {
+            margin-top: 0;
+            color: #004d40;
+        }
+        .car p {
+            margin: 10px 0;
+            color: #00796b;
+        }
+        .booking-form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #004d40;
+        }
+        .form-group input,
+        .form-group select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #004d40;
+            border-radius: 5px;
+        }
+        .form-group button {
+            background: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .form-group button:hover {
+            background: #004d40;
+        }
+        
+        /* Footer Buttons */
+        .footer-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer-buttons a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background: #004d40;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .footer-buttons a:hover {
+            background: #00796b;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .car {
+                padding: 15px;
+            }
+            .booking-form {
+                padding: 15px;
+            }
+            .form-group input,
+            .form-group select {
+                width: 100%;
+            }
+            .footer-buttons {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-buttons {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Rent a Car</h1>
+</header>
+
+<div class="container">
+    <div class="car">
+        <h2><a href="economy-car.html">Economy Car</a></h2>
+        <p>Price: $30 per day</p>
+        <p>Description: A compact and fuel-efficient car, perfect for city driving.</p>
+    </div>
+
+    <div class="car">
+        <h2><a href="suv-car.html">SUV</a></h2>
+        <p>Price: $60 per day</p>
+        <p>Description: A spacious and comfortable SUV, ideal for family trips.</p>
+    </div>
+
+    <div class="car">
+        <h2><a href="luxury-car.html">Luxury Car</a></h2>
+        <p>Price: $120 per day</p>
+        <p>Description: A premium car offering top-notch comfort and performance.</p>
+    </div>
+
+    <div class="booking-form">
+        <h2>Book Your Car</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="car-type">Select Car</label>
+                <select id="car-type" name="car-type">
+                    <option value="economy">Economy Car</option>
+                    <option value="suv">SUV</option>
+                    <option value="luxury">Luxury Car</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pickup-date">Pick-up Date</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+            </div>
+            <div class="form-group">
+                <label for="dropoff-date">Drop-off Date</label>
+                <input type="date" id="dropoff-date" name="dropoff-date" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Now</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer class="footer-buttons">
+    <a href="index.html">Home</a>
+    <a href="air-tickets.html">Air Tickets</a>
+</footer>
+
+</body>
+</html>

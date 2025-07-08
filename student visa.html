@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Visas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('st visa.jpg'); /* Add your background image path here */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(224, 247, 250, 0.5); /* Adjust transparency here */
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: rgba(0, 121, 107, 0.8); /* Adjust transparency here */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .visa-type {
+            background: rgba(255, 255, 255, 0.9); /* Adjust transparency here */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .visa-type:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .visa-type h2 {
+            margin-top: 0;
+            color: #004d40;
+        }
+        .visa-type p {
+            margin: 10px 0;
+            color: #00796b;
+        }
+        .contact-form {
+            background: rgba(255, 255, 255, 0.9); /* Adjust transparency here */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .contact-form h2 {
+            color: #004d40;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group button {
+            background: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background: #004d40;
+        }
+        @media (max-width: 768px) {
+            .visa-type,
+            .contact-form {
+                padding: 15px;
+            }
+            .form-group input,
+            .form-group textarea {
+                width: calc(100% - 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Student Visas</h1>
+</header>
+
+<div class="container">
+    <div class="visa-type">
+        <h2>F-1 Student Visa</h2>
+        <p>Duration: Duration of Study Program</p>
+        <p>Description: The F-1 visa is for academic students enrolled in universities, colleges, high schools, language training programs, and other academic institutions.</p>
+    </div>
+
+    <div class="visa-type">
+        <h2>M-1 Student Visa</h2>
+        <p>Duration: Duration of Study Program</p>
+        <p>Description: The M-1 visa is for students enrolled in vocational or non-academic programs, other than language training.</p>
+    </div>
+
+    <div class="visa-type">
+        <h2>J-1 Exchange Visitor Visa</h2>
+        <p>Duration: Duration of Exchange Program</p>
+        <p>Description: The J-1 visa is for exchange visitors participating in programs that promote cultural exchange, especially to obtain medical, business, or other training.</p>
+    </div>
+
+    <div class="contact-form">
+        <h2>Contact Us for More Information</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

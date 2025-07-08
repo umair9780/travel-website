@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Visa - Travel Agency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd; /* Light blue background */
+            margin: 0;
+            padding: 0;
+            background-image: url('visit visa.jpg');
+            background-size: 100% auto;
+            background-repeat: repeat-y;
+            background-position: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: #1565c0; /* Dark blue header */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1565c0; /* Matching background for navigation */
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        nav ul li a {
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffb300; /* Yellow hover color */
+        }
+        .hero {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 50px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #1565c0; /* Dark blue heading color */
+        }
+        .section li {
+            background-color: #e1f5fe; /* Light blue list item background */
+            border: 1px solid #90caf9; /* Light blue border */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .form-group label {
+            color: #1565c0; /* Dark blue label color */
+        }
+        .form-group button {
+            background: #1565c0; /* Dark blue button */
+        }
+        .form-group button:hover {
+            background: #0d47a1; /* Darker blue on hover */
+        }
+        footer {
+            background-color: #263238; /* Dark background for footer */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .whatsapp {
+            background-color: #1565c0; /* Dark blue WhatsApp button */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <button class="menu-toggle">☰ Menu</button>
+    <nav>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.location.href='air tickets.html'">Air Tickets</button>
+            <button onclick="window.location.href='hotels booking.html'">Hotels Booking</button>
+            <button onclick="window.location.href='umrah pakages.html'">Umrah Packages</button>
+            <button onclick="window.location.href='Visit Visa.html'">Visit Visa</button>
+            <button onclick="window.location.href='student visa.html'">Student Visa</button>
+            <button onclick="window.location.href='work permit.html'">Work Permit</button>
+            <button onclick="window.location.href='rent a car.html'">Rent a Car</button>
+            <button onclick="window.location.href='contact us.html'">Contact Us</button>
+            <button onclick="window.location.href='about.html'">About</button>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Visit Visa Services</h1>
+            <p>Plan your next visit abroad with our comprehensive visa services. Whether it's for tourism, business, or family visits, we assist you at every step.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Our Visit Visa Services</h2>
+        <ul>
+            <li>Visa consultation</li>
+            <li>Application assistance</li>
+            <li>Document verification</li>
+            <li>Interview preparation</li>
+            <li>Follow-up services</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Why Choose Us for Visit Visa?</h2>
+        <ul>
+            <li>Experienced visa consultants</li>
+            <li>High approval rates</li>
+            <li>Personalized guidance</li>
+            <li>Affordable service fees</li>
+            <li>Comprehensive support</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Famous Tourist Countries Visas</h2>
+        <ul>
+            <li>USA</li>
+            <li>Canada</li>
+            <li>UK</li>
+            <li>Australia</li>
+            <li>New Zealand</li>
+            <li>Schengen Area (Europe)</li>
+            <li>Japan</li>
+            <li>Singapore</li>
+            <li>Malaysia</li>
+            <li>UAE</li>
+        </ul>
+    </section>
+
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 UA Travelers Website. All rights reserved.</p>
+</footer>
+
+<!-- WhatsApp Contact Plugin -->
+<a href="https://wa.me/1234567890" class="whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- FontAwesome for WhatsApp Icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

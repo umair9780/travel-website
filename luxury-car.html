@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #00796b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .car-detail {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        .car-detail h2 {
+            margin-top: 0;
+            color: #004d40;
+        }
+        .car-detail p {
+            margin: 10px 0;
+            color: #00796b;
+        }
+        .car-detail img {
+            width: 100%; /* Ensures image fits the container width */
+            height: auto; /* Keeps aspect ratio */
+            border-radius: 5px;
+            object-fit: cover; /* Makes sure the image covers the container properly */
+            margin: 10px 0;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #004d40;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .back-button:hover {
+            background: #00796b;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .car-detail {
+                padding: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            .car-detail {
+                padding: 10px;
+            }
+            .back-button {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Luxury Cars</h1>
+</header>
+
+<div class="container">
+    <div class="car-detail">
+        <h2>Luxury Car Model 1</h2>
+        <img src="luxury-car1.jpg" alt="Luxury Car Model 1">
+        <p>Price: $120 per day</p>
+        <p>Description: A premium car offering top-notch comfort and performance.</p>
+    </div>
+
+    <div class="car-detail">
+        <h2>Luxury Car Model 2</h2>
+        <img src="luxury-car2" alt="Luxury Car Model 2"> <!-- Ensure the file extension is correct -->
+        <p>Price: $130 per day</p>
+        <p>Description: A high-end luxury car with exceptional features and style.</p>
+    </div>
+
+    <a href="rent a car.html" class="back-button">Back to Rent a Car</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economy Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #00796b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .car-detail {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        .car-detail h2 {
+            margin-top: 0;
+            color: #004d40;
+        }
+        .car-detail p {
+            margin: 10px 0;
+            color: #00796b;
+        }
+        .car-detail img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #004d40;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background: #00796b;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .car-detail {
+                padding: 15px;
+            }
+            .car-detail img {
+                max-height: 300px;
+            }
+            .back-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Economy Cars</h1>
+</header>
+
+<div class="container">
+    <div class="car-detail">
+        <h2>Economy Car </h2>
+        <img src="ec car 1" alt="Economy Car ">
+        <p>Price: $30 per day</p>
+        <p>Description: A compact and fuel-efficient car, perfect for city driving.</p>
+    </div>
+
+    <div class="car-detail">
+        <h2>Economy Car </h2>
+        <img src="economy-car2.jpg" alt="Economy Car">
+        <p>Price: $32 per day</p>
+        <p>Description: Another compact option, with slightly more features and comfort.</p>
+    </div>
+
+    <a href="rent a car.html" class="back-button">Back to Rent a Car</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff; /* Light text color for better contrast on dark background */
+            min-height: 100vh;
+            background: url('1st img.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            max-width: 1200px;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background for header */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .menu-toggle {
+            display: none;
+            background: rgba(0, 0, 0, 0.8); /* Dark background for toggle button */
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .menu-toggle:focus {
+            outline: none;
+        }
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-buttons button {
+            background-color: #004d40; /* Dark teal background for buttons */
+            border: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-buttons button:hover {
+            background-color: #003d33;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            color: #ffffff; /* White text for readability */
+            display: inline-block;
+            max-width: 100%;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* Text shadow for better contrast */
+        }
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* Text shadow for better contrast */
+        }
+
+        /* Other Sections */
+        .services, .why-choose-us, .additional-content {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            color: #ffffff; /* White text for readability */
+        }
+        .services h2, .why-choose-us h2, .additional-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff; /* White text for headers */
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* Text shadow for better contrast */
+        }
+        .services ul, .why-choose-us ul, .additional-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .services li, .why-choose-us li, .additional-content li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 45%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .services li:hover, .why-choose-us li:hover, .additional-content li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .founder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            color: #ffffff; /* White text for readability */
+        }
+        .founder img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background for footer */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 15px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .services li,
+            .why-choose-us li,
+            .additional-content li {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .services li,
+            .why-choose-us li,
+            .additional-content li {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .hero p {
+                font-size: 0.9rem;
+            }
+            .services ul,
+            .why-choose-us ul,
+            .additional-content ul {
+                flex-direction: column;
+            }
+            .services li,
+            .why-choose-us li,
+            .additional-content li {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .nav-buttons {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <button class="menu-toggle">☰ Menu</button>
+    <nav>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.location.href='air tickets.html'">Air Tickets</button>
+            <button onclick="window.location.href='hotels booking.html'">Hotels Booking</button>
+            <button onclick="window.location.href='umrah pakages.html'">Umrah Packages</button>
+            <button onclick="window.location.href='Visit Visa.html'">Visit Visa</button>
+            <button onclick="window.location.href='student visa.html'">Student Visa</button>
+            <button onclick="window.location.href='work permit.html'">Work Permit</button>
+            <button onclick="window.location.href='rent a car.html'">Rent a Car</button>
+            <button onclick="window.location.href='contact us.html'">Contact Us</button>
+            <button onclick="window.location.href='about.html'">About</button>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the UA Travelers Website</h1>
+            <p>Welcome to the UA Travelers Website, your premier digital platform tailored to revolutionize every aspect of travel planning, booking, and management. Designed with both leisure and business travelers in mind, our website offers a seamless and intuitive user experience. From effortless flight and hotel bookings to secure payment options and real-time information updates, we prioritize convenience and reliability. Embracing a user-centric approach, our platform integrates cutting-edge technology to ensure robust security measures, responsive design across devices, and personalized features like reviews and notifications. Whether you're embarking on a solo adventure or coordinating a corporate trip, the UA Travelers Website is your trusted companion, committed to enhancing every step of your journey.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Flight bookings</li>
+            <li>Hotel reservations</li>
+            <li>Transportation options</li>
+            <li>User profiles</li>
+            <!-- Add more services as per your description -->
+        </ul>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Personalized travel packages tailored to your needs</li>
+            <li>24/7 customer support for all your travel queries</li>
+            <li>Exclusive deals and discounts on flights and hotels</li>
+            <li>Easy and secure online booking process</li>
+            <li>Comprehensive travel insurance options</li>
+            <li>Expert travel advice and recommendations</li>
+        </ul>
+    </section>
+
+    <section class="additional-content">
+        <h2>Our Commitment</h2>
+        <p>At UA Travelers, we prioritize your travel experience. Our dedicated team works around the clock to provide you with the best deals and support. Whether you're planning a family vacation or a business trip, we offer tailored solutions to meet your needs. Join the thousands of satisfied customers who have trusted us with their travel plans and experience the difference.</p>
+    </section>
+</div>
+
+<section class="founder">
+    <h2>Our Founder</h2>
+    <div class="founder-content">
+        <img src="founder img.jpeg" alt="Umair Ali" class="center-img">
+        <h3>Umair Ali</h3>
+        <p>Umair Ali, the visionary behind our travel agency, has dedicated his career to making travel accessible and enjoyable for everyone. With a passion for exploring new places and cultures, Umair brings a wealth of knowledge and expertise to the travel industry.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 UA Travelers Website. All rights reserved.</p>
+</footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navButtons = document.querySelector('.nav-buttons');
+    
+    menuToggle.addEventListener('click', () => {
+        if (navButtons.style.display === 'flex') {
+            navButtons.style.display = 'none';
+        } else {
+            navButtons.style.display = 'flex';
+        }
+    });
+
+    // Ensure buttons are hidden on smaller screens
+    if (window.innerWidth <= 480) {
+        navButtons.style.display = 'none';
+    }
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 480) {
+            navButtons.style.display = 'none';
+        } else {
+            navButtons.style.display = 'flex';
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Dark background color */
+            color: #e0e0e0; /* Light text color for contrast */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px; /* Adjust max-width as needed */
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding is included in width */
+        }
+        header {
+            background: #333333; /* Darker background for header */
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background: #1e1e1e; /* Darker background for form */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .form-group label {
+            flex: 1;
+            margin-right: 20px;
+            color: #ffffff; /* White text color for labels */
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group input[type="radio"] + label {
+            color: #ffffff; /* White text color for radio button labels */
+        }
+        .form-group .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .form-group .radio-group label {
+            margin-right: 10px;
+        }
+        .form-group .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+        .form-group .date-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .form-group .date-group label {
+            flex: 1;
+            margin-right: 20px;
+            color: #ffffff; /* White text color for labels */
+        }
+        .form-group .date-group input[type="date"] {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #444; /* Dark border color */
+            border-radius: 5px;
+            background-color: #333333; /* Dark background for inputs */
+            color: #e0e0e0; /* Light text color for inputs */
+            width: 100%; /* Ensure date inputs fill the available space */
+        }
+        .form-group button {
+            background: #007BFF; /* Bright button color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-group button:hover {
+            background: #0056b3; /* Darker button color on hover */
+        }
+
+        /* Media queries for responsive design */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+            .form-group {
+                flex-direction: column; /* Stack form groups vertically on smaller screens */
+            }
+            .form-group label {
+                margin-bottom: 5px; /* Reduce margin below labels for better vertical spacing */
+                text-align: left; /* Align labels to the left on smaller screens */
+            }
+            .form-group .date-group {
+                flex-direction: column; /* Stack date inputs vertically on smaller screens */
+                gap: 10px; /* Adjust gap between date inputs */
+            }
+            .form-group .date-group label {
+                margin-right: 0; /* Remove right margin for date labels on smaller screens */
+                margin-bottom: 5px; /* Reduce bottom margin for date labels */
+                text-align: left; /* Align date labels to the left */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Air Ticket Booking</h1>
+</header>
+
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label>Trip Type</label>
+            <div class="radio-group">
+                <input type="radio" id="round-trip" name="trip-type" value="round-trip" checked>
+                <label for="round-trip">Round Trip</label>
+                
+                <input type="radio" id="one-way" name="trip-type" value="one-way">
+                <label for="one-way">One Way</label>
+                
+                <input type="radio" id="multi-city" name="trip-type" value="multi-city">
+                <label for="multi-city">Multi-City</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="departure-city">Departure City</label>
+            <select id="departure-city" name="departure-city">
+                <option value="karachi">Karachi</option>
+                <option value="lahore">Lahore</option>
+                <option value="islamabad">Islamabad</option>
+                <option value="peshawar">Peshawar</option>
+                <option value="multan">Multan</option>
+                <option value="dubai">Dubai</option>
+                <option value="doha">Doha</option>
+                <option value="london">London</option>
+                <option value="paris">Paris</option>
+                <option value="beijing">Beijing</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="arrival-city">Arrival City</label>
+            <select id="arrival-city" name="arrival-city">
+                <option value="karachi">Karachi</option>
+                <option value="lahore">Lahore</option>
+                <option value="islamabad">Islamabad</option>
+                <option value="peshawar">Peshawar</option>
+                <option value="multan">Multan</option>
+                <option value="dubai">Dubai</option>
+                <option value="doha">Doha</option>
+                <option value="london">London</option>
+                <option value="paris">Paris</option>
+                <option value="beijing">Beijing</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group date-group" id="return-date-group">
+            <label for="departure-date">Departure Date</label>
+            <input type="date" id="departure-date" name="departure-date">
+            
+            <label for="return-date">Return Date</label>
+            <input type="date" id="return-date" name="return-date">
+        </div>
+        <div class="form-group">
+            <label for="passengers">Number of Passengers</label>
+            <select id="passengers" name="passengers">
+                <option value="1">1 Passenger</option>
+                <option value="2">2 Passengers</option>
+                <option value="3">3 Passengers</option>
+                <option value="4">4 Passengers</option>
+                <option value="5">5 Passengers</option>
+                <option value="6">6 Passengers</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit">Search Flights</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    // JavaScript to show/hide return date field based on trip type
+    const tripTypeRadios = document.querySelectorAll('input[name="trip-type"]');
+    const returnDateGroup = document.getElementById('return-date-group');
+
+    tripTypeRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.value === 'round-trip') {
+                returnDateGroup.style.display = 'flex';
+            } else {
+                returnDateGroup.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
